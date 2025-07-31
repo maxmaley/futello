@@ -1,0 +1,85 @@
+/*
+Theme Name: Futello Child
+Description: Child theme for Futello football prediction platform
+Template: astra
+Version: 1.0.0
+Author: Futello Team
+*/
+
+/* Import parent theme styles */
+@import url("../astra/style.css");
+
+/* Futello Custom Styles */
+:root {
+    --futello-primary: #00D4AA;
+    --futello-secondary: #4A67D1;
+    --futello-dark: #1A1D29;
+    --futello-light: #F8F9FA;
+    --futello-gradient: linear-gradient(135deg, #00D4AA 0%, #4A67D1 100%);
+}
+
+/* Header Styles */
+.futello-header {
+    background: var(--futello-gradient);
+    padding: 60px 0;
+    color: white;
+    text-align: center;
+}
+
+.futello-match-header {
+    background: var(--futello-gradient);
+    padding: 40px 0;
+    color: white;
+}
+
+/* Match Cards */
+.futello-match-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.futello-match-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Team Logos */
+.futello-team-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Buttons */
+.futello-btn {
+    background: var(--futello-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.futello-btn:hover {
+    background: #00B891;
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .futello-header {
+        padding: 40px 0;
+    }
+    
+    .futello-team-logo {
+        width: 50px;
+        height: 50px;
+    }
+}
