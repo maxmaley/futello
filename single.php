@@ -565,10 +565,9 @@
                     </div>
 
                     <div class="comment-form">
-                        <input type="text" placeholder="
-                          <input type="text" placeholder="Write your comment..." />
-                       <button type="submit">➤</button>
-                   </div>
+    <input type="text" placeholder="Write your comment..." />
+    <button type="submit">➤</button>
+</div>
                </div>
 
                <!-- Browse by league -->
