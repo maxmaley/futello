@@ -456,3 +456,209 @@ a:hover {
         font-size: 1rem;
     }
 }
+
+/* ===== HERO СЕКЦИЯ ===== */
+.hero {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--medium-blue) 100%);
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="2" fill="%23ffffff20"/><circle cx="800" cy="300" r="2" fill="%23ffffff20"/><circle cx="400" cy="600" r="2" fill="%23ffffff20"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.hero-subtitle {
+    color: var(--primary-green);
+    display: block;
+    font-weight: 800;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--gray);
+}
+
+.hero-actions {
+    margin-top: 2rem;
+}
+
+/* ===== СЕКЦИИ ===== */
+.matches-section {
+    padding: 5rem 0;
+    background: var(--light-gray);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    color: var(--dark-blue);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), var(--light-blue));
+    border-radius: 2px;
+}
+
+/* ===== КАРТОЧКИ МАТЧЕЙ ===== */
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.match-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.match-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), var(--light-blue));
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.match-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.match-time {
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.match-league {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.team-logo img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-name {
+    font-weight: 600;
+    color: var(--dark-blue);
+    font-size: 0.95rem;
+}
+
+.vs {
+    font-weight: 800;
+    color: var(--gray);
+    font-size: 1.2rem;
+}
+
+.prediction-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ СТРАНИЦ ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 0;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .matches-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .match-card {
+        padding: 1.5rem;
+    }
+    
+    .match-teams {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .team {
+        justify-content: center;
+    }
+    
+    .vs {
+        order: 2;
+        margin: 0.5rem 0;
+    }
+}
