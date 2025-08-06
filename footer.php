@@ -78,19 +78,5 @@
 
 <?php wp_footer(); ?>
 
-<script>
-// Простой JavaScript для мобильного меню
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileNav = document.querySelector('.mobile-nav');
-    
-    if (mobileToggle && mobileNav) {
-        mobileToggle.addEventListener('click', function() {
-            mobileNav.classList.toggle('active');
-        });
-    }
-});
-</script>
-
 </body>
 </html>
