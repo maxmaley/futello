@@ -59,33 +59,21 @@ function futello_enqueue_assets() {
         array('futello-fonts'),
         wp_get_theme()->get('Version')
     );
-    
-    // JavaScript для интерактивности
-    wp_enqueue_script(
-        'futello-script',
-        get_template_directory_uri() . '/js/futello.js',
-        array(),
-        wp_get_theme()->get('Version'),
-        true
-    );
 }
 add_action('wp_enqueue_scripts', 'futello_enqueue_assets');
 
 /**
- * Регистрация областей для виджетов
+ * Fallback меню если не создано основное меню
  */
-function futello_widgets_init() {
-    register_sidebar(array(
-        'name'          => 'Боковая панель',
-        'id'            => 'sidebar-1',
-        'description'   => 'Добавьте виджеты здесь',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ));
+function futello_fallback_menu() {
+    echo '<ul class="nav-menu">';
+    echo '<li><a href="' . home_url() . '">Home</a></li>';
+    echo '<li><a href="' . home_url('/predictions') . '">Predictions</a></li>';
+    echo '<li><a href="' . home_url('/reviews') . '">Reviews</a></li>';
+    echo '<li><a href="' . home_url('/statistics') . '">Statistics</a></li>';
+    echo '<li><a href="' . home_url('/about') . '">About us</a></li>';
+    echo '</ul>';
 }
-add_action('widgets_init', 'futello_widgets_init');
 
 /**
  * Настройка длины отрывка
@@ -94,13 +82,4 @@ function futello_excerpt_length($length) {
     return 20;
 }
 add_filter('excerpt_length', 'futello_excerpt_length');
-
-/**
- * Кастомные размеры изображений
- */
-function futello_image_sizes() {
-    add_image_size('futello-hero', 1200, 600, true);
-    add_image_size('futello-card', 400, 300, true);
-}
-add_action('after_setup_theme', 'futello_image_sizes');
 ?>
