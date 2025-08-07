@@ -1774,222 +1774,6 @@ a:hover {
    font-size: 1.3rem;
 }
 
-/* League Table */
-.league-table {
-   width: 100%;
-   border-collapse: collapse;
-   background: var(--white);
-   border-radius: 8px;
-   overflow: hidden;
-   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.league-table th {
-   background: var(--light-gray);
-   padding: 1rem 0.75rem;
-   text-align: left;
-   font-weight: 600;
-   color: var(--dark-blue);
-   font-size: 0.9rem;
-}
-
-.league-table td {
-   padding: 1rem 0.75rem;
-   border-bottom: 1px solid #F3F4F6;
-   font-size: 0.9rem;
-}
-
-.league-table tr:hover {
-   background: #FAFBFC;
-}
-
-.league-table tr.highlight {
-   background: rgba(34, 197, 94, 0.05);
-}
-
-.league-table tr.champions-league {
-   border-left: 4px solid var(--primary-green);
-}
-
-.team-cell {
-   display: flex;
-   align-items: center;
-   gap: 0.5rem;
-}
-
-.team-cell img {
-   width: 20px;
-   height: 20px;
-}
-
-/* Match Results */
-.matches-comparison {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 2rem;
-}
-
-.team-matches h4 {
-   margin-bottom: 1rem;
-   color: var(--dark-blue);
-}
-
-.match-results {
-   display: flex;
-   gap: 0.5rem;
-   margin-bottom: 2rem;
-}
-
-.result {
-   width: 32px;
-   height: 32px;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-weight: 700;
-   font-size: 0.9rem;
-   color: var(--white);
-}
-
-.result.win {
-   background: var(--primary-green);
-}
-
-.result.loss {
-   background: #EF4444;
-}
-
-.result.draw {
-   background: #F59E0B;
-}
-
-.mini-match {
-   display: flex;
-   justify-content: space-between;
-   padding: 0.75rem;
-   background: #F8FAFC;
-   border-radius: 8px;
-   margin-bottom: 0.5rem;
-}
-
-.mini-match .teams {
-   font-size: 0.9rem;
-   color: var(--dark-blue);
-}
-
-.mini-match .score {
-   font-weight: 600;
-   color: var(--gray);
-}
-
-/* Summary Statistics */
-.stats-bars {
-   display: flex;
-   flex-direction: column;
-   gap: 1.5rem;
-}
-
-.stat-row {
-   display: flex;
-   align-items: center;
-   gap: 1rem;
-}
-
-.stat-label {
-   min-width: 120px;
-   font-weight: 500;
-   color: var(--dark-blue);
-   font-size: 0.9rem;
-}
-
-.stat-bar {
-   flex: 1;
-   height: 32px;
-   background: #F3F4F6;
-   border-radius: 16px;
-   position: relative;
-   overflow: hidden;
-}
-
-.bar-fill {
-   height: 100%;
-   border-radius: 16px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-weight: 600;
-   font-size: 0.85rem;
-   color: var(--white);
-   transition: width 1s ease-out;
-}
-
-.bar-fill[data-team="milan"] {
-   background: var(--primary-green);
-}
-
-.bar-fill[data-team="shakhtar"] {
-   background: #EF4444;
-   position: absolute;
-   right: 0;
-   top: 0;
-}
-
-/* Head-to-Head */
-.h2h-stats {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   background: var(--light-gray);
-   padding: 2rem;
-   border-radius: 12px;
-   margin-bottom: 2rem;
-}
-
-.h2h-team {
-   text-align: center;
-   flex: 1;
-}
-
-.h2h-team h4 {
-   margin: 0 0 1rem 0;
-   color: var(--dark-blue);
-}
-
-.h2h-percentage {
-   font-size: 2rem;
-   font-weight: 800;
-   color: var(--primary-green);
-}
-
-.h2h-draws {
-   text-align: center;
-   padding: 0 2rem;
-}
-
-.h2h-draws span:first-child {
-   display: block;
-   font-size: 1.5rem;
-   font-weight: 700;
-   color: var(--gray);
-   margin-bottom: 0.5rem;
-}
-
-.h2h-matches {
-   display: flex;
-   flex-direction: column;
-   gap: 0.75rem;
-}
-
-.h2h-match {
-   padding: 1rem;
-   background: #F8FAFC;
-   border-radius: 8px;
-   text-align: center;
-   font-weight: 500;
-   color: var(--dark-blue);
-}
-
 /* Sidebar */
 .sidebar {
    display: flex;
@@ -2366,7 +2150,410 @@ a:hover {
        padding: 1rem 0;
    }
 }
+/* ===== НОВЫЕ СТИЛИ ДЛЯ ВКЛАДКИ STATS ===== */
 
+/* Tournament Table - Компактная версия */
+.tournament-table {
+    margin-bottom: 3rem;
+}
+
+.league-table-compact {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+.league-table-compact th {
+    background: #F8F9FA;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--dark-blue);
+    font-size: 0.85rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.league-table-compact th:first-child,
+.league-table-compact td:first-child {
+    text-align: center;
+    width: 40px;
+}
+
+.league-table-compact th:nth-child(2),
+.league-table-compact td:nth-child(2) {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.league-table-compact td {
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid #F3F4F6;
+    color: var(--dark-blue);
+}
+
+.league-table-compact tr:hover {
+    background: #FAFBFC;
+}
+
+.league-table-compact tr.team-highlight {
+    background: rgba(34, 197, 94, 0.05);
+}
+
+.league-table-compact tr.team-highlight.milan {
+    background: rgba(172, 22, 22, 0.05);
+}
+
+.league-table-compact tr.team-highlight.shakhtar {
+    background: rgba(255, 107, 0, 0.05);
+}
+
+.team-name-cell {
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+/* Last 10 Matches - Две колонки */
+.last-matches-section {
+    margin-bottom: 3rem;
+}
+
+.matches-grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.team-matches-column {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.team-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.team-header h4 {
+    margin: 0 0 1rem 0;
+    color: var(--dark-blue);
+    font-size: 1rem;
+}
+
+.form-result-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.form-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--white);
+}
+
+.form-circle.win {
+    background: var(--primary-green);
+}
+
+.form-circle.loss {
+    background: #EF4444;
+}
+
+.form-circle.draw {
+    background: #F59E0B;
+}
+
+.match-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.match-card-small {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--white);
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.teams-small {
+    font-weight: 500;
+    color: var(--dark-blue);
+    flex: 1;
+}
+
+.score-small {
+    font-weight: 700;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Summary Statistics - Полоски сравнения */
+.summary-statistics {
+    margin-bottom: 3rem;
+}
+
+.team-comparison-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.team-left {
+    color: var(--primary-green);
+}
+
+.team-right {
+    color: #EF4444;
+}
+
+.comparison-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat-comparison {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-number {
+    font-weight: 700;
+    color: var(--dark-blue);
+    min-width: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.stat-number.left {
+    color: var(--primary-green);
+}
+
+.stat-number.right {
+    color: #EF4444;
+}
+
+.stat-bar-container {
+    flex: 1;
+    height: 32px;
+    background: #F3F4F6;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.stat-label-center {
+    position: absolute;
+    z-index: 3;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--dark-blue);
+    text-align: center;
+}
+
+.stat-bar-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--primary-green);
+    border-radius: 16px 0 0 16px;
+    transition: width 0.8s ease-out;
+}
+
+.stat-bar-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #EF4444;
+    border-radius: 0 16px 16px 0;
+    transition: width 0.8s ease-out;
+}
+
+/* Head-to-Head */
+.head-to-head-section {
+    margin-bottom: 2rem;
+}
+
+.h2h-percentages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.h2h-team-stat {
+    text-align: center;
+    flex: 1;
+}
+
+.h2h-team-stat.left {
+    color: var(--primary-green);
+}
+
+.h2h-team-stat.right {
+    color: #EF4444;
+}
+
+.h2h-team-stat h4 {
+    margin: 0 0 1rem 0;
+    color: var(--dark-blue);
+    font-size: 1rem;
+}
+
+.percentage-big {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.h2h-team-stat.left .percentage-big {
+    color: var(--primary-green);
+}
+
+.h2h-team-stat.right .percentage-big {
+    color: #EF4444;
+}
+
+.h2h-draws-stat {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.draws-percentage {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.draws-label {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.h2h-matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.h2h-match-item {
+    padding: 0.75rem 1rem;
+    background: #F8FAFC;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--dark-blue);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.h2h-match-item:hover {
+    background: #F0FDF4;
+}
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ НОВОЙ STATS ВКЛАДКИ ===== */
+@media (max-width: 768px) {
+    .matches-grid-two {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .team-comparison-header {
+        font-size: 0.9rem;
+    }
+    
+    .stat-label-center {
+        font-size: 0.75rem;
+    }
+    
+    .stat-number {
+        font-size: 0.85rem;
+        min-width: 25px;
+    }
+    
+    .h2h-percentages {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .h2h-draws-stat {
+        padding: 1rem 0;
+    }
+    
+    .percentage-big {
+        font-size: 2rem;
+    }
+    
+    .draws-percentage {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .league-table-compact {
+        font-size: 0.8rem;
+    }
+    
+    .league-table-compact th,
+    .league-table-compact td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    .team-matches-column {
+        padding: 1rem;
+    }
+    
+    .match-card-small {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .stat-comparison {
+        gap: 0.5rem;
+    }
+    
+    .stat-bar-container {
+        height: 28px;
+    }
+    
+    .stat-label-center {
+        font-size: 0.7rem;
+    }
+    
+    .h2h-percentages {
+        padding: 1.5rem;
+    }
+}
 /* JavaScript для табов */
 .js-tabs-initialized .tab-panel {
    animation: fadeIn 0.3s ease-out;
@@ -2382,3 +2569,4 @@ a:hover {
        transform: translateY(0);
    }
 }
+
