@@ -271,192 +271,283 @@
                         </div>
                     </div>
 
-                    <!-- Stats Tab -->
-                    <div id="stats" class="tab-panel">
-                        <div class="stats-content">
-                            
-                            <!-- Tournament Table -->
-                            <div class="tournament-table">
-                                <h3>Tournament table</h3>
-                                <table class="league-table">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Team</th>
-                                            <th>P</th>
-                                            <th>W</th>
-                                            <th>D</th>
-                                            <th>L</th>
-                                            <th>GD</th>
-                                            <th>Pts</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="highlight">
-                                            <td>1</td>
-                                            <td>Real Madrid</td>
-                                            <td>5</td>
-                                            <td>3</td>
-                                            <td>2</td>
-                                            <td>0</td>
-                                            <td>+6</td>
-                                            <td>11</td>
-                                        </tr>
-                                        <tr class="highlight">
-                                            <td>2</td>
-                                            <td>AC Milan</td>
-                                            <td>5</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>+3</td>
-                                            <td>10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Arsenal</td>
-                                            <td>5</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>+2</td>
-                                            <td>8</td>
-                                        </tr>
-                                        <tr class="highlight">
-                                            <td>4</td>
-                                            <td>FC Shakhtar Donetsk</td>
-                                            <td>5</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td>-6</td>
-                                            <td>4</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+<!-- Stats Tab -->
+<div id="stats" class="tab-panel">
+    <div class="stats-content">
+        
+        <!-- Tournament Table -->
+        <div class="tournament-table">
+            <h3>Tournament table</h3>
+            <table class="league-table-compact">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Team</th>
+                        <th>P</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>GD</th>
+                        <th>Pts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="team-highlight">
+                        <td>1</td>
+                        <td class="team-name-cell">Real Madrid</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>+6</td>
+                        <td><strong>11</strong></td>
+                    </tr>
+                    <tr class="team-highlight milan">
+                        <td>2</td>
+                        <td class="team-name-cell">AC Milan</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>+3</td>
+                        <td><strong>10</strong></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="team-name-cell">Arsenal</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>+2</td>
+                        <td><strong>8</strong></td>
+                    </tr>
+                    <tr class="team-highlight shakhtar">
+                        <td>4</td>
+                        <td class="team-name-cell">FC Shakhtar Donetsk</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>-6</td>
+                        <td><strong>4</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-                            <!-- Last 10 Matches -->
-                            <div class="last-matches">
-                                <h3>Last 10 matches</h3>
-                                <div class="matches-comparison">
-                                    <div class="team-matches">
-                                        <h4>AC Milan</h4>
-                                        <div class="match-results">
-                                            <div class="result win">W</div>
-                                            <div class="result loss">L</div>
-                                            <div class="result draw">D</div>
-                                            <div class="result win">W</div>
-                                            <div class="result win">W</div>
-                                        </div>
-                                        <!-- Individual match cards -->
-                                        <div class="match-list">
-                                            <div class="mini-match">
-                                                <div class="teams">AC Milan vs Real Madrid</div>
-                                                <div class="score">1-2</div>
-                                            </div>
-                                            <div class="mini-match">
-                                                <div class="teams">Real Madrid vs AC Milan</div>
-                                                <div class="score">3-1</div>
-                                            </div>
-                                            <!-- More matches... -->
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="team-matches">
-                                        <h4>FC Shakhtar Donetsk</h4>
-                                        <div class="match-results">
-                                            <div class="result loss">L</div>
-                                            <div class="result draw">D</div>
-                                            <div class="result win">W</div>
-                                            <div class="result loss">L</div>
-                                            <div class="result loss">L</div>
-                                        </div>
-                                        <!-- Individual match cards -->
-                                        <div class="match-list">
-                                            <div class="mini-match">
-                                                <div class="teams">FC Shakhtar Donetsk vs Arsenal</div>
-                                                <div class="score">0-2</div>
-                                            </div>
-                                            <div class="mini-match">
-                                                <div class="teams">Real Madrid vs FC Shakhtar Donetsk</div>
-                                                <div class="score">4-1</div>
-                                            </div>
-                                            <!-- More matches... -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Summary Statistics -->
-                            <div class="summary-stats">
-                                <h3>Summary statistics for the last 10 matches</h3>
-                                <div class="stats-bars">
-                                    <div class="stat-row">
-                                        <span class="stat-label">Goals Scored</span>
-                                        <div class="stat-bar">
-                                            <div class="bar-fill" style="width: 70%;" data-team="milan">16</div>
-                                            <div class="bar-fill right" style="width: 45%;" data-team="shakhtar">9</div>
-                                        </div>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span class="stat-label">Goals conceded</span>
-                                        <div class="stat-bar">
-                                            <div class="bar-fill" style="width: 35%;" data-team="milan">7</div>
-                                            <div class="bar-fill right" style="width: 80%;" data-team="shakhtar">18</div>
-                                        </div>
-                                    </div>
-                                    <!-- More stats... -->
-                                    <div class="stat-row">
-                                        <span class="stat-label">Wins</span>
-                                        <div class="stat-bar">
-                                            <div class="bar-fill" style="width: 60%;" data-team="milan">6</div>
-                                            <div class="bar-fill right" style="width: 20%;" data-team="shakhtar">2</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Head-to-Head -->
-                            <div class="head-to-head">
-                                <h3>Head-to-head</h3>
-                                <div class="h2h-stats">
-                                    <div class="h2h-team">
-                                        <h4>AC Milan</h4>
-                                        <div class="h2h-percentage">70%</div>
-                                    </div>
-                                    <div class="h2h-draws">
-                                        <span>15%</span>
-                                        <span>Draws</span>
-                                    </div>
-                                    <div class="h2h-team">
-                                        <h4>FC Shakhtar Donetsk</h4>
-                                        <div class="h2h-percentage">15%</div>
-                                    </div>
-                                </div>
-                                
-                                <!-- H2H Match History -->
-                                <div class="h2h-matches">
-                                    <div class="h2h-match">
-                                        <span>FC Shakhtar Donetsk 1-3 AC Milan</span>
-                                    </div>
-                                    <div class="h2h-match">
-                                        <span>FC Shakhtar Donetsk 1-3 AC Milan</span>
-                                    </div>
-                                    <div class="h2h-match">
-                                        <span>FC Shakhtar Donetsk 1-3 AC Milan</span>
-                                    </div>
-                                    <div class="h2h-match">
-                                        <span>FC Shakhtar Donetsk 1-3 AC Milan</span>
-                                    </div>
-                                    <div class="h2h-match">
-                                        <span>FC Shakhtar Donetsk 1-3 AC Milan</span>
-                                    </div>
-                                </div>
-                            </div>
-
+        <!-- Last 10 Matches -->
+        <div class="last-matches-section">
+            <h3>Last 10 matches</h3>
+            <div class="matches-grid-two">
+                <!-- AC Milan Column -->
+                <div class="team-matches-column">
+                    <div class="team-header">
+                        <h4>AC Milan</h4>
+                        <div class="form-result-row">
+                            <div class="form-circle win">W</div>
+                            <div class="form-circle loss">L</div>
+                            <div class="form-circle draw">D</div>
+                            <div class="form-circle win">W</div>
+                            <div class="form-circle win">W</div>
                         </div>
                     </div>
+                    
+                    <div class="match-cards-list">
+                        <div class="match-card-small">
+                            <div class="teams-small">AC Milan vs Real Madrid</div>
+                            <div class="score-small">1 - 2</div>
+                        </div>
+                        <div class="match-card-small">
+                            <div class="teams-small">Real Madrid vs AC Milan</div>
+                            <div class="score-small">3 - 1</div>
+                        </div>
+                        <div class="match-card-small">
+                            <div class="teams-small">AC Milan vs Arsenal</div>
+                            <div class="score-small">2 - 2</div>
+                        </div>
+                        <div class="match-card-small">
+                            <div class="teams-small">FC Shakhtar vs AC Milan</div>
+                            <div class="score-small">0 - 3</div>
+                        </div>
+                        <div class="match-card-small">
+                            <div class="teams-small">AC Milan vs Real Madrid</div>
+                            <div class="score-small">1 - 1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FC Shakhtar Donetsk Column -->
+                <div class="team-matches-column">
+                    <div class="team-header">
+                        <h4>FC Shakhtar Donetsk</h4>
+                        <div class="form-result-row">
+                            <div class="form-circle loss">L</div>
+                            <div class="form-circle draw">D</div>
+                            <div class="form-circle win">W</div>
+                            <div class="form-circle loss">L</div>
+                            <div class="form-circle loss">L</div>
+                        </div>
+                    </div>
+                    
+                    <div class="match-cards-list">
+                        <div class="match-card-small">
+                            <div class="teams-small">FC Shakhtar vs Arsenal</div>
+                            <div class="score-small">0 - 2</div>
+                        </div>
+                        <div class="match-card-small">
+                            <div class="teams-small">Real Madrid vs FC Shakhtar</div>
+                            <div class="score-small">4 - 1</div>
+                        </div>
+                        <div class="match-card-small">
+                            <div class="teams-small">FC Shakhtar vs Arsenal</div>
+                            <div class="score-small">1 - 1</div>
+                        </div>
+                        <div class="match-card-small">
+                            <div class="teams-small">AC Milan vs FC Shakhtar</div>
+                            <div class="score-small">3 - 0</div>
+                        </div>
+                        <div class="match-card-small">
+                            <div class="teams-small">FC Shakhtar vs Real Madrid</div>
+                            <div class="score-small">1 - 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Statistics -->
+        <div class="summary-statistics">
+            <h3>Summary statistics for the last 10 matches</h3>
+            <div class="team-comparison-header">
+                <span class="team-left">AC Milan</span>
+                <span class="team-right">FC Shakhtar Donetsk</span>
+            </div>
+            
+            <div class="comparison-bars">
+                <div class="stat-comparison">
+                    <span class="stat-number left">16</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar-left" style="width: 70%;"></div>
+                        <span class="stat-label-center">Goals Scored</span>
+                        <div class="stat-bar-right" style="width: 45%;"></div>
+                    </div>
+                    <span class="stat-number right">9</span>
+                </div>
+                
+                <div class="stat-comparison">
+                    <span class="stat-number left">7</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar-left" style="width: 35%;"></div>
+                        <span class="stat-label-center">Goals conceded</span>
+                        <div class="stat-bar-right" style="width: 80%;"></div>
+                    </div>
+                    <span class="stat-number right">18</span>
+                </div>
+                
+                <div class="stat-comparison">
+                    <span class="stat-number left">16</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar-left" style="width: 65%;"></div>
+                        <span class="stat-label-center">Wins</span>
+                        <div class="stat-bar-right" style="width: 25%;"></div>
+                    </div>
+                    <span class="stat-number right">6</span>
+                </div>
+                
+                <div class="stat-comparison">
+                    <span class="stat-number left">16</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar-left" style="width: 45%;"></div>
+                        <span class="stat-label-center">Shots on target</span>
+                        <div class="stat-bar-right" style="width: 60%;"></div>
+                    </div>
+                    <span class="stat-number right">15</span>
+                </div>
+                
+                <div class="stat-comparison">
+                    <span class="stat-number left">16</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar-left" style="width: 80%;"></div>
+                        <span class="stat-label-center">Corners</span>
+                        <div class="stat-bar-right" style="width: 30%;"></div>
+                    </div>
+                    <span class="stat-number right">8</span>
+                </div>
+                
+                <div class="stat-comparison">
+                    <span class="stat-number left">16</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar-left" style="width: 55%;"></div>
+                        <span class="stat-label-center">Fouls</span>
+                        <div class="stat-bar-right" style="width: 70%;"></div>
+                    </div>
+                    <span class="stat-number right">18</span>
+                </div>
+                
+                <div class="stat-comparison">
+                    <span class="stat-number left">16</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar-left" style="width: 40%;"></div>
+                        <span class="stat-label-center">Yellow cards</span>
+                        <div class="stat-bar-right" style="width: 85%;"></div>
+                    </div>
+                    <span class="stat-number right">22</span>
+                </div>
+                
+                <div class="stat-comparison">
+                    <span class="stat-number left">16</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar-left" style="width: 20%;"></div>
+                        <span class="stat-label-center">Red cards</span>
+                        <div class="stat-bar-right" style="width: 50%;"></div>
+                    </div>
+                    <span class="stat-number right">5</span>
+                </div>
+                
+                <div class="stat-comparison">
+                    <span class="stat-number left">16</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar-left" style="width: 75%;"></div>
+                        <span class="stat-label-center">Average ball possession</span>
+                        <div class="stat-bar-right" style="width: 35%;"></div>
+                    </div>
+                    <span class="stat-number right">9</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Head-to-Head -->
+        <div class="head-to-head-section">
+            <h3>Head-to-head</h3>
+            <div class="h2h-percentages">
+                <div class="h2h-team-stat left">
+                    <h4>AC Milan</h4>
+                    <div class="percentage-big">70%</div>
+                </div>
+                <div class="h2h-draws-stat">
+                    <span class="draws-percentage">15%</span>
+                    <span class="draws-label">Draws</span>
+                </div>
+                <div class="h2h-team-stat right">
+                    <h4>FC Shakhtar Donetsk</h4>
+                    <div class="percentage-big">15%</div>
+                </div>
+            </div>
+            
+            <div class="h2h-matches-list">
+                <div class="h2h-match-item">FC Shakhtar Donetsk 1-3 AC Milan</div>
+                <div class="h2h-match-item">FC Shakhtar Donetsk 1-3 AC Milan</div>
+                <div class="h2h-match-item">FC Shakhtar Donetsk 1-3 AC Milan</div>
+                <div class="h2h-match-item">FC Shakhtar Donetsk 1-3 AC Milan</div>
+                <div class="h2h-match-item">FC Shakhtar Donetsk 1-3 AC Milan</div>
+                <div class="h2h-match-item">FC Shakhtar Donetsk 1-3 AC Milan</div>
+                <div class="h2h-match-item">FC Shakhtar Donetsk 1-3 AC Milan</div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
                     <!-- Standings Tab -->
                     <div id="standings" class="tab-panel">
